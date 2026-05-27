@@ -1,0 +1,165 @@
+<section class="admission-form-section">
+  <div class="container">
+    <div class="form-wrapper">
+      <div class="form-heading">
+        <span class="form-tag"> Admissions Open • Academic Year 2026 – 2027 </span>
+
+        <h2>
+          Maharishi Vidya Mandir
+
+          <span>Admission Form</span>
+        </h2>
+
+        <p>Fill in the details below to begin your child's educational journey.</p>
+      </div>
+
+      <form [formGroup]="admissionForm" (ngSubmit)="submitForm()">
+        <!-- Student Details -->
+
+        <div class="form-card">
+          <h3>Student Details</h3>
+
+          <div class="row">
+            <div class="col-lg-6 col-md-6">
+              <label>Student Name *</label>
+
+              <input type="text" formControlName="studentName" />
+
+              <small class="error" *ngIf="submitted && f['studentName'].errors">
+                Student name is required
+              </small>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <label>Date of Birth *</label>
+
+              <input type="date" formControlName="dob" />
+
+              <small class="error" *ngIf="submitted && f['dob'].errors">
+                Date of birth is required
+              </small>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <label>Gender *</label>
+
+              <select formControlName="gender">
+                <option value="">Select Gender</option>
+
+                <option>Male</option>
+                <option>Female</option>
+                <option>Other</option>
+              </select>
+
+              <small class="error" *ngIf="submitted && f['gender'].errors">
+                Please select gender
+              </small>
+            </div>
+
+            <div class="col-lg-6 col-md-6">
+              <label>Applying For Class *</label>
+
+              <select formControlName="class">
+                <option value="">Select Class</option>
+
+                <option>Pre KG</option>
+                <option>LKG</option>
+                <option>UKG</option>
+                <option>Grade I</option>
+                <option>Grade II</option>
+                <option>Grade III</option>
+                <option>Grade IV</option>
+                <option>Grade V</option>
+                <option>Grade VI</option>
+                <option>Grade VII</option>
+                <option>Grade VIII</option>
+                <option>Grade IX</option>
+                <option>Grade X</option>
+                <option>Grade XI</option>
+                <option>Grade XII</option>
+              </select>
+
+              <small class="error" *ngIf="submitted && f['class'].errors">
+                Please select class
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Parent Details -->
+
+        <div class="form-card">
+          <h3>Parent Details</h3>
+
+          <div class="row">
+            <div class="col-lg-6">
+              <label>Father Name *</label>
+
+              <input type="text" formControlName="fatherName" />
+
+              <small class="error" *ngIf="submitted && f['fatherName'].errors">
+                Father name required
+              </small>
+            </div>
+
+            <div class="col-lg-6">
+              <label>Mother Name *</label>
+
+              <input type="text" formControlName="motherName" />
+
+              <small class="error" *ngIf="submitted && f['motherName'].errors">
+                Mother name required
+              </small>
+            </div>
+
+            <div class="col-lg-6">
+              <label>Mobile Number *</label>
+
+              <input type="tel" formControlName="mobile" />
+
+              <small class="error" *ngIf="submitted && f['mobile'].errors">
+                Enter valid mobile number
+              </small>
+            </div>
+
+            <div class="col-lg-6">
+              <label>Email *</label>
+
+              <input type="email" formControlName="email" />
+
+              <small class="error" *ngIf="submitted && f['email'].errors">
+                Enter valid email
+              </small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Address -->
+
+        <div class="form-card">
+          <h3>Address Information</h3>
+
+          <textarea rows="5" formControlName="address" placeholder="Enter Address"> </textarea>
+
+          <small class="error" *ngIf="submitted && f['address'].errors"> Address required </small>
+        </div>
+
+        <button class="submit-btn" type="submit">Submit Application</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="success-popup-overlay" *ngIf="showPopup">
+    <div class="success-popup">
+      <div class="success-icon">
+        <i class="fas fa-check"></i>
+      </div>
+
+      <h2>Thank You!</h2>
+
+      <p>Your admission request has been submitted successfully. We will contact you shortly.</p>
+
+      <button (click)="closePopup()">Close</button>
+    </div>
+  </div>
+</section>

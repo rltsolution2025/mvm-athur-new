@@ -1,0 +1,166 @@
+<section class="contact-section">
+  <div class="container">
+    <div class="contact-heading">
+      <span class="contact-badge"> Maharishi Vidya Mandir • Contact Us </span>
+
+      <h2>Get In <span>Touch</span></h2>
+
+      <p>
+        We welcome parents and students to contact us for admissions, academic enquiries and campus
+        visits. Our team is happy to assist you.
+      </p>
+    </div>
+
+    <div class="contact-wrapper">
+      <!-- LEFT -->
+
+      <div class="contact-info">
+        <h3>School Information</h3>
+
+        <div class="info-box">
+          <i class="fas fa-map-marker-alt"></i>
+
+          <div>
+            <h4>School Address</h4>
+
+            <p>
+              Maharishi Vidya Mandir<br />
+              Athur, Tamil Nadu, India
+            </p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <i class="fas fa-phone"></i>
+
+          <div>
+            <h4>Phone Number</h4>
+
+            <p>+91 9876543210</p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <i class="fas fa-envelope"></i>
+
+          <div>
+            <h4>Email Address</h4>
+
+            <p>info@mvm.edu.in</p>
+          </div>
+        </div>
+
+        <div class="info-box">
+          <i class="fas fa-clock"></i>
+
+          <div>
+            <h4>Office Hours</h4>
+
+            <p>
+              Monday - Saturday<br />
+              9:00 AM - 5:00 PM
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT FORM -->
+
+      <div class="contact-form-box">
+        <h3>Send Enquiry</h3>
+
+        <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+          <div class="input-row">
+            <div class="field">
+              <input type="text" placeholder="Student Name" formControlName="studentName" />
+
+              <small *ngIf="submitted && f['studentName'].errors"> Student name required </small>
+            </div>
+
+            <div class="field">
+              <input type="text" placeholder="Parent Name" formControlName="parentName" />
+
+              <small *ngIf="submitted && f['parentName'].errors"> Parent name required </small>
+            </div>
+          </div>
+
+          <div class="input-row">
+            <div class="field">
+              <input type="email" placeholder="Email Address" formControlName="email" />
+
+              <small *ngIf="submitted && f['email'].errors"> Enter valid email </small>
+            </div>
+
+            <div class="field">
+              <input type="text" placeholder="Phone Number" formControlName="phone" />
+
+              <small *ngIf="submitted && f['phone'].errors"> Enter valid 10 digit number </small>
+            </div>
+          </div>
+
+          <div class="field">
+            <select formControlName="class">
+              <option value="">Select Class</option>
+
+              <option>Pre-KG</option>
+
+              <option>LKG</option>
+
+              <option>UKG</option>
+
+              <option>Grade I</option>
+              <option>Grade II</option>
+              <option>Grade III</option>
+              <option>Grade IV</option>
+              <option>Grade V</option>
+              <option>Grade VI</option>
+              <option>Grade VII</option>
+              <option>Grade VIII</option>
+              <option>Grade IX</option>
+              <option>Grade XI</option>
+              
+            </select>
+
+            <small *ngIf="submitted && f['class'].errors"> Select class </small>
+          </div>
+
+          <div class="field">
+            <textarea rows="5" placeholder="Message" formControlName="message"> </textarea>
+
+            <small *ngIf="submitted && f['message'].errors"> Minimum 10 characters required </small>
+          </div>
+
+          <button type="submit">Send Enquiry</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- =====================================
+THANK YOU POPUP
+===================================== -->
+
+    <div class="success-popup" *ngIf="showSuccessPopup">
+      <div class="success-content">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+
+        <h2>Thank You!</h2>
+
+        <p>Your enquiry has been submitted successfully. Our team will contact you shortly.</p>
+
+        <button (click)="closePopup()">OK</button>
+      </div>
+    </div>
+
+    <!-- MAP -->
+
+    <div class="map-container">
+      <iframe
+        src="https://maps.google.com/maps?q=maharishi%20vidya%20mandir&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy"
+      >
+      </iframe>
+    </div>
+  </div>
+</section>

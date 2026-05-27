@@ -1,0 +1,344 @@
+<section class="top-header-purple">
+  <div class="container">
+    <div class="header-wrapper">
+      <!-- Left -->
+      <div class="left-section">
+        <a href="tel:+919876543210" class="links">
+          <i class="fa-solid fa-phone"></i> +91 98765 43210
+        </a>
+
+        <a href="mailto:info@rltacademy.com" class="links">
+          <i class="fa-solid fa-envelope"></i> info@rltacademy.com
+        </a>
+      </div>
+
+      <!-- Center -->
+      <div class="center-section">
+        <p>|| Admissions Open 2026–27 | Excellence in Education Starts Here ||</p>
+      </div>
+
+      <!-- Right -->
+      <div class="right-section">
+        <div class="social-icons">
+          <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+
+        <a routerLink="/admissions" class="enroll-btn"> Enroll Now </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg main-header sticky-header">
+  <div class="container align-items-center">
+    <!-- LOGO -->
+    <a class="navbar-brand d-flex align-items-center" routerLink="/">
+      <img src="Logo/MVM_logo.png" class="logo-img" />
+    </a>
+
+    <!-- MOBILE TOGGLE -->
+
+    <button
+      class="navbar-toggler mobile-toggle"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#mobileMenu"
+      aria-controls="mobileMenu"
+    >
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- DESKTOP MENU -->
+
+    <div class="navbar-collapse justify-content-end d-none d-lg-flex">
+      <ul class="navbar-nav align-items-lg-center">
+        <!-- HOME -->
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
+            Home
+          </a>
+        </li>
+
+        <!-- ABOUT -->
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active"> About</a>
+        </li>
+
+        <!-- ACADEMICS -->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> Academics </a>
+
+          <ul class="dropdown-menu">
+            <!-- Curriculum -->
+
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle"> Curriculum </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" routerLink="/kids" routerLinkActive="active">
+                    Kindergarten
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" routerLink="/middle-school" routerLinkActive="active"
+                    >Middele School
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" routerLink="/primary" routerLinkActive="active">
+                    Primary
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Student Life -->
+
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle"> Student Life </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" routerLink="/activities" routerLinkActive="active">
+                    Activities
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" routerLink="/sports" routerLinkActive="active">
+                    Sports
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Resources -->
+
+            <li class="dropdown-submenu">
+              <a class="dropdown-item dropdown-toggle"> Resources </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" routerLink="/library" routerLinkActive="active">
+                    Library
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" routerLink="/labs" routerLinkActive="active">
+                    Laboratories
+                  </a>
+                </li>
+
+                <li>
+                  <a class="dropdown-item" routerLink="/smart-classes" routerLinkActive="active">
+                    Smart Classes
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li class="nav-item">
+              <a class="dropdown-item" routerLink="/facilities" routerLinkActive="active">
+                Facilities
+              </a>
+            </li>
+
+            <!-- ADMISSIONS -->
+
+            <li class="nav-item">
+              <a class="dropdown-item" routerLink="/admissions" routerLinkActive="active">
+                Admissions
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="nev-item">
+          <a class="nav-link" routerLink="/mandatory-public-disclosure" routerLinkActive="active">
+            Mandatory Disclosure</a
+          >
+        </li>
+
+        <!-- GALLERY -->
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/gallery" routerLinkActive="active"> Gallery </a>
+        </li>
+
+        <!-- CONTACT -->
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active"> Contact </a>
+        </li>
+
+        <!-- MOBILE LOGIN BUTTON -->
+
+        <div class="mobile-login-wrapper">
+          <a
+            class="mobile-login-btn"
+            href="https://rltfuturex.thinkific.com/users/sign_in"
+            target="_blank"
+          >
+            Student / Teacher Login
+          </a>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ================= MOBILE OFFCANVAS ================= -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu">
+  <!-- HEADER -->
+  <div class="offcanvas-header">
+    <div class="d-flex align-items-center gap-2">
+      <img src="Logo/MVM_logo.png" width="240px" height="40px" alt="RLT Academy" />
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <!-- BODY -->
+  <div class="offcanvas-body">
+    <!-- MOBILE MENU -->
+    <ul class="mobile-menu">
+      <!-- HOME -->
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          data-bs-dismiss="offcanvas"
+        >
+          <i class="fa-solid fa-house"></i> Home
+        </a>
+      </li>
+      <!-- ABOUT -->
+      <li>
+        <a
+          routerLink="/about"
+          data-bs-dismiss="offcanvas"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <i class="fa-solid fa-circle-info"></i> About Us
+        </a>
+      </li>
+      <!-- ACADEMICS -->
+      <li>
+        <button
+          class="mobile-dropdown-btn"
+          data-bs-toggle="collapse"
+          data-bs-target="#academicsMenu"
+        >
+          <span> <i class="fa-solid fa-graduation-cap"></i> Academics </span>
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+        <div class="collapse" id="academicsMenu">
+          <ul class="mobile-submenu">
+            <li>
+              <a
+                routerLink="/kids"
+                data-bs-dismiss="offcanvas"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+              >
+                Kindergarten
+              </a>
+            </li>
+            <li>
+              <a routerLink="/primary" data-bs-dismiss="offcanvas" routerLinkActive="active">
+                Primary
+              </a>
+            </li>
+            <li>
+              <a
+                routerLink="/middle-school"
+                data-bs-dismiss="offcanvas"
+                routerLinkActive="active"
+                [routerLinkActiveOptions]="{ exact: true }"
+                >Middle School
+              </a>
+            </li>
+            <li>
+              <a routerLink="/activities" data-bs-dismiss="offcanvas" routerLinkActive="active">
+                Activities
+              </a>
+            </li>
+            <li>
+              <a routerLink="/sports" data-bs-dismiss="offcanvas" routerLinkActive="active">
+                Sports
+              </a>
+            </li>
+            <li>
+              <a routerLink="/library" data-bs-dismiss="offcanvas" routerLinkActive="active">
+                Library
+              </a>
+            </li>
+            <li>
+              <a routerLink="/labs" data-bs-dismiss="offcanvas" routerLinkActive="active">
+                Laboratories
+              </a>
+            </li>
+            <li>
+              <a routerLink="/smart-classes" data-bs-dismiss="offcanvas" routerLinkActive="active">
+                Smart Classes
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <!-- ADMISSIONS -->
+      <li>
+        <a routerLink="/admissions" data-bs-dismiss="offcanvas" routerLinkActive="active">
+          <i class="fa-solid fa-file-signature"></i> Admissions
+        </a>
+      </li>
+      <!-- FACILITIES -->
+      <li>
+        <a routerLink="/facilities" data-bs-dismiss="offcanvas" routerLinkActive="active">
+          <i class="fa-solid fa-school"></i> Facilities
+        </a>
+      </li>
+      <!-- GALLERY -->
+      <li>
+        <a routerLink="/gallery" data-bs-dismiss="offcanvas" routerLinkActive="active">
+          <i class="fa-solid fa-image"></i> Gallery
+        </a>
+      </li>
+      <!-- CONTACT -->
+      <li>
+        <a routerLink="/contact" data-bs-dismiss="offcanvas" routerLinkActive="active">
+          <i class="fa-solid fa-phone"></i> Contact
+        </a>
+      </li>
+    </ul>
+    <!-- MOBILE LOGIN -->
+    <div class="mobile-login-wrapper">
+      <a
+        class="mobile-login-btn"
+        href="https://rltfuturex.thinkific.com/users/sign_in"
+        target="_blank"
+      >
+        <!-- CONTENT -->
+        <div class="login-content">
+          <span class="login-title"> Student / Teacher Login </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

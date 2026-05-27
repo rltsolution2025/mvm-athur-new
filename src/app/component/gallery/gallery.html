@@ -1,0 +1,75 @@
+<!-- ======================================
+SCHOOL GALLERY
+====================================== -->
+
+<section class="school-gallery">
+  <div class="container">
+    <div class="gallery-heading">
+      <span class="gallery-badge"> Maharishi Vidya Mandir • School Memories </span>
+
+      <h2>School <span>Gallery</span></h2>
+
+      <p>
+        Explore memorable moments from annual celebrations, sports activities, classroom learning,
+        student achievements, cultural programs and inspiring school events.
+      </p>
+    </div>
+
+    <!-- GALLERY GRID -->
+
+    <div class="memory-grid">
+      <div
+        class="memory-card"
+        *ngFor="let item of galleryItems"
+        (click)="openMedia(item)"
+        [class.large]="item.large"
+      >
+        <!-- IMAGE -->
+
+        <img *ngIf="item.type == 'image'" [src]="item.thumbnail" [alt]="item.title" />
+
+        <!-- VIDEO THUMBNAIL -->
+
+        <div class="video-box" *ngIf="item.type == 'video'">
+          <img [src]="item.thumbnail" [alt]="item.title" />
+
+          <div class="play-btn">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+
+        <div class="memory-overlay">
+          <h4>{{ item.title }}</h4>
+
+          <p>{{ item.description }}</p>
+
+          <span class="count-badge">
+            {{ item.count }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================================
+POPUP
+====================================== -->
+
+<div class="image-popup" *ngIf="showPopup" (click)="closeMedia()">
+  <div class="popup-content" (click)="$event.stopPropagation()">
+    <!-- IMAGE -->
+
+    <img *ngIf="selectedType == 'image'" [src]="selectedMedia" />
+
+    <!-- VIDEO -->
+
+    <video *ngIf="selectedType == 'video'" controls autoplay>
+      <source [src]="selectedMedia" />
+    </video>
+
+    <span class="close-btn" (click)="closeMedia()">
+      <i class="fas fa-times"></i>
+    </span>
+  </div>
+</div>

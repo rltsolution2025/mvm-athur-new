@@ -1,0 +1,544 @@
+/* ===================================
+GLOBAL
+=================================== */
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+section {
+  position: relative;
+}
+
+/* ===================================
+KINDERGARTEN HERO
+=================================== */
+
+.kg-modern {
+  padding: 100px 0;
+
+  background: linear-gradient(135deg, #f4fbff, #fff5eb);
+
+  overflow: hidden;
+}
+
+/* BADGE */
+
+.kg-badge {
+  display: inline-block;
+
+  padding: 12px 25px;
+
+  background: #e8f2ff;
+
+  color: #0056d2;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  border-radius: 50px;
+
+  margin-bottom: 25px;
+
+  box-shadow: 0 5px 15px rgba(0, 86, 210, 0.08);
+}
+
+/* HERO TITLE */
+
+.kg-left h1 {
+  font-size: 65px;
+
+  font-weight: 800;
+
+  line-height: 1.2;
+
+  margin-bottom: 25px;
+
+  color: #0a2540;
+}
+
+.kg-left h1 span {
+  color: #ff9800;
+}
+
+/* HERO TEXT */
+
+.kg-left p {
+  font-size: 17px;
+
+  line-height: 1.9;
+
+  color: #666;
+
+  margin-bottom: 35px;
+
+  max-width: 600px;
+}
+
+/* ===================================
+BUTTONS
+=================================== */
+
+.kg-buttons {
+  display: flex;
+
+  gap: 20px;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+}
+
+.apply-btn,
+.enquiry-btn {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  padding: 15px 35px;
+
+  border-radius: 50px;
+
+  font-size: 15px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.4s;
+}
+
+/* APPLY */
+
+.apply-btn {
+  background: linear-gradient(135deg, #0056d2, #0077ff);
+
+  color: white;
+
+  box-shadow: 0 10px 25px rgba(0, 86, 210, 0.25);
+}
+
+.apply-btn:hover {
+  transform: translateY(-5px);
+
+  color: white;
+
+  box-shadow: 0 15px 35px rgba(0, 86, 210, 0.35);
+}
+
+/* ENQUIRY */
+
+.enquiry-btn {
+  background: white;
+
+  border: 2px solid #0056d2;
+
+  color: #0056d2;
+}
+
+.enquiry-btn:hover {
+  background: #0056d2;
+
+  color: white;
+
+  transform: translateY(-5px);
+}
+
+/* ===================================
+IMAGE SECTION
+=================================== */
+
+.image-layout {
+  position: relative;
+
+  height: 500px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.main-image {
+  width: 430px;
+
+  height: 450px;
+
+  overflow: hidden;
+
+  border-radius: 40px;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 0.5s;
+}
+
+.main-image:hover img {
+  transform: scale(1.08);
+}
+
+.small-image {
+  position: absolute;
+
+  bottom: 0;
+  right: 20px;
+
+  width: 220px;
+  height: 220px;
+
+  overflow: hidden;
+
+  border-radius: 30px;
+
+  border: 8px solid white;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.small-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+/* ===================================
+SECTION HEADINGS
+=================================== */
+
+.heading {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.heading span {
+  display: inline-block;
+
+  padding: 10px 20px;
+
+  background: #fff0d6;
+
+  border-radius: 30px;
+
+  font-weight: 600;
+
+  color: #ff9800;
+
+  margin-bottom: 20px;
+}
+
+.heading h2 {
+  font-size: 45px;
+
+  font-weight: 800;
+
+  color: #0a2540;
+
+  margin-bottom: 20px;
+}
+
+.heading p {
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.8;
+
+  color: #666;
+}
+
+/* ===================================
+LEARNING SECTION
+=================================== */
+
+.learning-approach {
+  padding: 100px 0;
+
+  background: white;
+}
+
+.approach-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 30px;
+}
+
+.approach-card {
+  padding: 40px;
+
+  background: white;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+  transition: 0.5s;
+}
+
+.approach-card:hover {
+  transform: translateY(-10px);
+}
+
+.approach-card i {
+  width: 80px;
+  height: 80px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  margin: auto auto 25px;
+
+  font-size: 35px;
+
+  color: #0056d2;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, #edf5ff, #dcecff);
+
+  transition: 0.5s;
+}
+
+.approach-card:hover i {
+  background: linear-gradient(135deg, #0056d2, #0077ff);
+
+  color: white;
+
+  transform: rotate(12deg);
+}
+
+.approach-card h4 {
+  font-size: 22px;
+
+  font-weight: 700;
+
+  margin-bottom: 15px;
+
+  color: #0a2540;
+}
+
+.approach-card p {
+  line-height: 1.8;
+
+  color: #666;
+}
+
+/* ===================================
+DAY SECTION
+=================================== */
+
+.day-section {
+  padding: 100px 0;
+
+  background: #f8fbff;
+}
+
+.day-image {
+  width: 100%;
+
+  border-radius: 30px;
+
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.08);
+}
+
+.day-content h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 25px;
+
+  color: #0a2540;
+}
+
+.day-content p {
+  line-height: 1.9;
+
+  margin-bottom: 25px;
+
+  color: #666;
+}
+
+.day-content ul {
+  list-style: none;
+
+  padding-left: 0;
+}
+
+.day-content ul li {
+  padding-left: 35px;
+
+  position: relative;
+
+  margin-bottom: 15px;
+
+  font-weight: 500;
+}
+
+.day-content ul li::before {
+  content: '✓';
+
+  position: absolute;
+
+  left: 0;
+
+  color: #ff9800;
+
+  font-weight: bold;
+}
+
+/* ===================================
+JOIN SECTION
+=================================== */
+
+.join-section {
+  padding: 100px 0;
+
+  background: linear-gradient(135deg, #0056d2, #0077ff);
+}
+
+.join-card {
+  background: white;
+
+  padding: 70px;
+
+  border-radius: 40px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.join-card h2 {
+  font-size: 42px;
+
+  font-weight: 800;
+
+  margin-bottom: 20px;
+}
+
+.join-card p {
+  font-size: 17px;
+
+  line-height: 1.8;
+
+  margin-bottom: 35px;
+
+  color: #666;
+}
+
+.join-card a {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 15px 35px;
+
+  background: linear-gradient(135deg, #0056d2, #0077ff);
+
+  border-radius: 50px;
+
+  color: white;
+
+  font-weight: 700;
+
+  text-decoration: none;
+
+  transition: 0.4s;
+}
+
+.join-card a:hover {
+  transform: translateY(-5px);
+
+  color: white;
+}
+
+/* ===================================
+MOBILE
+=================================== */
+
+@media (max-width: 768px) {
+  .kg-modern {
+    padding: 70px 20px;
+  }
+
+  .kg-left {
+    text-align: center;
+  }
+
+  .kg-left h1 {
+    font-size: 38px;
+  }
+
+  .kg-buttons {
+    flex-direction: column;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    width: 100%;
+  }
+
+  .image-layout {
+    height: auto;
+
+    margin-top: 40px;
+  }
+
+  .main-image,
+  .small-image {
+    position: relative;
+
+    width: 100%;
+
+    height: 250px;
+
+    right: auto;
+
+    margin-bottom: 20px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading h2 {
+    font-size: 32px;
+  }
+
+  .day-content {
+    margin-top: 40px;
+
+    text-align: center;
+  }
+
+  .join-card {
+    padding: 35px;
+  }
+
+  .join-card h2 {
+    font-size: 30px;
+  }
+}
