@@ -150,7 +150,7 @@
   width: 490px;
   height: 90px;
   object-fit: contain;
-  margin-left: -100px;
+  margin-left: -90px;
 }
 
 .logo-text h5 {
@@ -477,6 +477,7 @@
     transition: all 0.3s ease;
     box-shadow: 0 10px 25px rgba(37, 99, 235, 0.25);
     margin-top: -10px;
+    margin-left: 20px;
   }
   /* ICON */
   .mobile-login-btn i {

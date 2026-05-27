@@ -19,7 +19,7 @@ KINDERGARTEN HERO
 .kg-modern {
   padding: 100px 0;
 
-  background: linear-gradient(135deg, #f4fbff, #fff5eb);
+  background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
 
   overflow: hidden;
 }
@@ -61,7 +61,7 @@ KINDERGARTEN HERO
 }
 
 .kg-left h1 span {
-  color: #ff9800;
+  color: #8b1e2d;
 }
 
 /* HERO TEXT */
@@ -350,7 +350,7 @@ DAY SECTION
 .day-section {
   padding: 100px 0;
 
-  background: #f8fbff;
+  background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
 }
 
 .day-image {
@@ -414,7 +414,7 @@ JOIN SECTION
 .join-section {
   padding: 100px 0;
 
-  background: linear-gradient(135deg, #0056d2, #0077ff);
+  background: linear-gradient(135deg, #0b1d2a, #1b263b);
 }
 
 .join-card {
@@ -456,7 +456,7 @@ JOIN SECTION
 
   padding: 15px 35px;
 
-  background: linear-gradient(135deg, #0056d2, #0077ff);
+  background: linear-gradient(135deg, #021b3f, #354250);
 
   border-radius: 50px;
 

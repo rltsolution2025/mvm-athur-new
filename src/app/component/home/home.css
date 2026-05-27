@@ -367,7 +367,7 @@ body {
   background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
   position: relative;
   overflow: hidden;
-  font-family: 'Poppins', sans-serif;
+  
 }
 
 .why-section::before {
@@ -400,7 +400,7 @@ body {
   color: #8b1e2d;
   margin-bottom: 15px;
   position: relative;
-  font-family:cursive;
+
 }
 
 .why-section .section-title span {
@@ -702,12 +702,11 @@ body {
   font-size: 42px;
   font-weight: 900;
   color: #8b1e2d;
-  font-family: cursive;
 }
 
 .founder-desk .section-title span {
   color: #007406;
-  font-family:cursive;
+
 }
 
 .section-subtitle {
@@ -792,7 +791,7 @@ body {
   font-size: 42px;
   font-weight: 900;
   color: #8b1e2d;
-  font-family: cursive;
+ 
 }
 
 .gallery-section .section-title span {

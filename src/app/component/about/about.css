@@ -9,7 +9,7 @@ MVM MODERN HERO V2
 
   overflow: hidden;
 
-  background: #f8fbff;
+  background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
 }
 
 /* BACKGROUND SHAPES */
@@ -23,7 +23,7 @@ MVM MODERN HERO V2
   width: 45%;
   height: 100%;
 
-  background: linear-gradient(135deg, #004aad, #0077ff);
+  background: linear-gradient(25deg, #0b1d2a, #1b263b, #1b263b, #0b1d2a, #1b263b, #0b1d2a, #f8f8ff);
 
   clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
 
@@ -38,7 +38,7 @@ MVM MODERN HERO V2
 
   border-radius: 50%;
 
-  background: rgba(255, 193, 7, 0.15);
+  background: rgba(42, 78, 0, 0.15);
 
   bottom: -100px;
   left: -50px;
@@ -95,7 +95,7 @@ MVM MODERN HERO V2
 }
 
 .hero-left h1 span {
-  color: #ff9800;
+  color: #8b1e2d;
 }
 
 .hero-left p {
@@ -348,7 +348,7 @@ MVM ABOUT SECTION
 ==================================== */
 
 .about-mvm-modern {
-  background: linear-gradient(180deg, #f8fbff, #eef6ff);
+  background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
 
   padding: 90px 0;
 }
@@ -387,7 +387,7 @@ MVM ABOUT SECTION
 }
 
 .section-header h2 span {
-  color: #ff9800;
+  color: #8b1e2d;
 }
 
 .section-header p {
@@ -689,7 +689,6 @@ MVM ABOUT SECTION
   background: linear-gradient(270deg, #0077b6, #ffd60a, #00b4d8);
   background-size: 300% 300%;
   animation: borderMove 6s linear infinite;
-
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
@@ -800,7 +799,7 @@ MODERN LEADERSHIP SHOWCASE
 .leadership-showcase {
   padding: 90px 0;
 
-  background: linear-gradient(135deg, #f5f9ff, #edf5ff);
+  background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
 
   overflow: hidden;
 }
@@ -840,7 +839,7 @@ MODERN LEADERSHIP SHOWCASE
 }
 
 .heading-area h2 span {
-  color: #ff9800;
+  color: #8b1e2d;
 }
 
 .heading-area p {
@@ -1412,7 +1411,7 @@ BAGLESS SECTION
 .bagless-section {
   padding: 100px 0;
 
-  background: linear-gradient(135deg, #f8fbff, #eef6ff);
+  background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
 
   overflow: hidden;
 }
@@ -1470,7 +1469,7 @@ BAGLESS SECTION
 }
 
 .bagless-content h2 span {
-  color: #ff9800;
+  color: #8b1e2d;
 }
 
 .bagless-content p {

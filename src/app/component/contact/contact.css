@@ -40,6 +40,10 @@ HEADING
   margin: 25px 0;
 }
 
+.contact-heading h2 span{
+  color: #8d1e2d;
+}
+
 .contact-heading span {
   color: #ff9800;
 }

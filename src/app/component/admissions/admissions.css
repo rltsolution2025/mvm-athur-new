@@ -49,7 +49,9 @@
 
   color: #0a2540;
 }
-
+.form-heading h2 span{
+  color: #8b1e2d
+}
 .form-heading span {
   color: #ff9800;
 }
