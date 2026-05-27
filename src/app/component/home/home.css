@@ -11,6 +11,7 @@
 .slides {
   height: 100%;
   position: relative;
+  background-color: #666;
 }
 
 .slide {
