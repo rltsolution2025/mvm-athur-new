@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ContactApi {
-  private apiUrl = 'http://localhost:5000/api/contact';
+  private apiUrl = 'https://mvm-athur-new.onrender.com/api/contact';
   constructor(private http: HttpClient) {}
 
   submitContact(data: any): Observable<any> {

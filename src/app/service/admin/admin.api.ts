@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 export class AdminApi {
   constructor(private http: HttpClient) {}
 
-  private apiUrl = 'http://localhost:5000/api/admin';
+  private apiUrl = 'https://mvm-athur-new.onrender.com/api/admin';
 
   login(data: any): Observable<any> {
     return this.http.post(`${this.apiUrl}/login`, data);
