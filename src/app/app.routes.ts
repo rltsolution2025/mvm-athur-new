@@ -18,6 +18,7 @@ import { Sports } from './component/sports/sports';
 import { Admissions } from './component/admissions/admissions';
 import { Terms } from './component/terms/terms';
 import { PrivacyPolicy } from './component/privacy-policy/privacy-policy';
+import { adminGuard } from './guards/admin-guard';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -39,5 +40,20 @@ export const routes: Routes = [
   { path: 'sports', component: Sports },
   { path: 'admissions', component: Admissions},
   { path: 'terms', component: Terms },
-  { path: 'privacy-policy', component: PrivacyPolicy}
+  { path: 'privacy-policy', component: PrivacyPolicy},
+
+  {
+    path: 'admin/login',
+
+    loadComponent: () => import('./admin/admin-login/admin-login').then((m) => m.AdminLogin),
+  },
+
+  {
+    path: 'admin/dashboard',
+
+    canActivate: [adminGuard],
+
+    loadComponent: () =>
+      import('./admin/admin-dashboard/admin-dashboard').then((m) => m.AdminDashboard),
+  },
 ];

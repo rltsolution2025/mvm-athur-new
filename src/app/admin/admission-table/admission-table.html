@@ -1,0 +1,94 @@
+<div class="table-header">
+  <h2>Admission Form Data</h2>
+
+  <button class="btn-export" (click)="exportExcel()">
+    <i class="fas fa-file-excel"></i>
+    Export Excel
+  </button>
+</div>
+
+<!-- Loading -->
+
+<div class="loading-box" *ngIf="loading">Loading admission data...</div>
+
+<!-- Admission Table -->
+
+<div class="table-responsive" *ngIf="!loading && admission.length > 0">
+  <table class="table table-bordered table-hover align-middle">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>Student Name</th>
+        <th>Class</th>
+        <th>Date of Birth</th>
+        <th>Gender</th>
+        <th>Father Name</th>
+        <th>Mother Name</th>
+        <th>Mobile</th>
+        <th>Email</th>
+        <th>Address</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let item of admission; let i = index">
+        <td>{{ i + 1 }}</td>
+
+        <td>
+          <div class="student-name">
+            {{ item.studentName }}
+          </div>
+        </td>
+
+        <td>
+          <span class="badge-class">
+            {{ item.class }}
+          </span>
+        </td>
+
+        <td>
+          {{ item.dob }}
+        </td>
+
+        <td>
+          <span
+            class="badge-gender"
+            [ngClass]="{
+              male: item.gender === 'Male',
+              female: item.gender === 'Female',
+            }"
+          >
+            {{ item.gender }}
+          </span>
+        </td>
+
+        <td>
+          {{ item.fatherName }}
+        </td>
+
+        <td>
+          {{ item.motherName }}
+        </td>
+
+        <td>
+          {{ item.mobile }}
+        </td>
+
+        <td>
+          {{ item.email }}
+        </td>
+
+        <td class="address-cell">
+          {{ item.address }}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Empty State -->
+
+<div class="empty-box" *ngIf="!loading && admission.length === 0">
+  <i class="fas fa-folder-open"></i>
+  <p>No admission records found</p>
+</div>

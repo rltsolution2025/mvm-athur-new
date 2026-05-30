@@ -1,7 +1,7 @@
 /* HERO SLIDER */
 .hero-slider {
   position: relative;
-  height: 75vh;
+  height: 110vh;
   /* 🔽 REDUCED */
   min-height: 500px;
   overflow: hidden;
@@ -11,7 +11,6 @@
 .slides {
   height: 100%;
   position: relative;
-  background-color: #666;
 }
 
 .slide {
@@ -36,7 +35,6 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  /*background: linear-gradient(120deg, rgba(0, 0, 0, 0.7), rgba(0, 119, 182, 0.5));*/
 }
 
 /* Glass Content */
@@ -45,13 +43,13 @@
   top: 50%;
   left: 8%;
   transform: translateY(-50%);
-  color: #fff;
+  color: #8b1e2d;
   max-width: 550px;
 }
 
 .glass {
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(25px);
+  background: rgba(218, 218, 218, 0.158);
   padding: 25px;
   border-radius: 15px;
 }
@@ -66,7 +64,8 @@
 .content p {
   margin: 15px 0;
   font-size: 16px;
-  color: #ddd;
+  color: #f8f8f8;
+  
 }
 
 /* Button */
@@ -238,7 +237,7 @@
 }
 
 .abt-tlt-2 {
-  color: #015527;
+  color: #0a2540;
 }
 
 /* Sub Heading */
@@ -249,7 +248,7 @@
 }
 
 .highlight {
-  color: #096b00;
+  color: #0a2540;
 }
 
 /* Text */
@@ -368,7 +367,6 @@ body {
   background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
   position: relative;
   overflow: hidden;
-  
 }
 
 .why-section::before {
@@ -401,11 +399,10 @@ body {
   color: #8b1e2d;
   margin-bottom: 15px;
   position: relative;
-
 }
 
 .why-section .section-title span {
-  color: #007406;
+  color: #0a2540;
 }
 
 .section-subtitle {
@@ -483,7 +480,6 @@ body {
 
   transition: 0.4s;
 }
-
 
 /* Content */
 
@@ -608,6 +604,9 @@ body {
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }
@@ -670,7 +669,7 @@ body {
 /* SECTION */
 .founder-desk {
   padding: 90px 20px;
-    background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
+  background: linear-gradient(135deg, #ffffee, #faf5e9, #fff3c1);
   position: relative;
   overflow: hidden;
 }
@@ -702,12 +701,11 @@ body {
 .founder-desk .section-title {
   font-size: 42px;
   font-weight: 900;
-  color: #8b1e2d;
+  color: #0a2540;
 }
 
 .founder-desk .section-title span {
-  color: #007406;
-
+  color: #8b1e2d;
 }
 
 .section-subtitle {
@@ -791,12 +789,11 @@ body {
 .gallery-section .section-title {
   font-size: 42px;
   font-weight: 900;
-  color: #8b1e2d;
- 
+  color: #0a2540;
 }
 
 .gallery-section .section-title span {
-  color: #007406;
+  color: #8b1e2d;
 }
 
 .section-subtitle {

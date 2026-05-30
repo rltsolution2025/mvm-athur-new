@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+import { AdmissionApi } from '../../service/admission/admission.api';
 
 @Component({
   selector: 'app-admissions',
@@ -13,13 +14,14 @@ import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angula
   styleUrl: './admissions.css',
 })
 export class Admissions {
+  [x: string]: any;
   submitted: boolean = false;
 
   showPopup: boolean = false;
 
   admissionForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private admissionService: AdmissionApi) {
     this.admissionForm = this.fb.group({
       // ======================
       // Student Details
@@ -74,17 +76,23 @@ export class Admissions {
       return;
     }
 
-    console.log('Admission Form Data:', this.admissionForm.value);
+    this.admissionService.submitAdmission(this.admissionForm.value).subscribe({
+      next: (res) => {
+        console.log(res);
 
-    // show success popup
+        this.showPopup = true;
 
-    this.showPopup = true;
+        this.admissionForm.reset();
 
-    // reset form
+        this.submitted = false;
+      },
 
-    this.admissionForm.reset();
+      error: (err) => {
+        console.log(err);
 
-    this.submitted = false;
+        alert('Something went wrong');
+      },
+    });
   }
 
   // ======================
