@@ -19,6 +19,7 @@ import { Admissions } from './component/admissions/admissions';
 import { Terms } from './component/terms/terms';
 import { PrivacyPolicy } from './component/privacy-policy/privacy-policy';
 import { adminGuard } from './guards/admin-guard';
+import { ThankYou } from './component/thank-you/thank-you';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -38,9 +39,10 @@ export const routes: Routes = [
   { path: 'primary', component: Primary },
   { path: 'smart-classes', component: SmartClass },
   { path: 'sports', component: Sports },
-  { path: 'admissions', component: Admissions},
+  { path: 'admissions', component: Admissions },
   { path: 'terms', component: Terms },
-  { path: 'privacy-policy', component: PrivacyPolicy},
+  { path: 'privacy-policy', component: PrivacyPolicy },
+  { path: 'thank-you', component: ThankYou },
 
   {
     path: 'admin/login',

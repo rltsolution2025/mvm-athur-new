@@ -1,33 +1,26 @@
 import { CommonModule } from '@angular/common';
-
 import { Component } from '@angular/core';
-
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { ContactApi } from '../../service/contact/contact.api';
 
 @Component({
   selector: 'app-contact',
-
   standalone: true,
-
   imports: [CommonModule, ReactiveFormsModule],
-
   templateUrl: './contact.html',
-
   styleUrls: ['./contact.css'],
 })
 export class Contact {
-  submitted: boolean = false;
-
-  showSuccessPopup: boolean = false;
+  submitted = false;
 
   contactForm: FormGroup;
 
   constructor(
     private fb: FormBuilder,
-
     private contactService: ContactApi,
+    private router: Router,
   ) {
     this.contactForm = this.fb.group({
       studentName: ['', [Validators.required]],
@@ -40,28 +33,18 @@ export class Contact {
 
       class: ['', [Validators.required]],
 
-      message: ['', [Validators.required, Validators.minLength(10)]],
+      message: [''],
     });
   }
-
-  /* =====================================
-     EASY VALIDATION ACCESS
-  ===================================== */
 
   get f() {
     return this.contactForm.controls;
   }
 
-  /* =====================================
-     SUBMIT FORM
-  ===================================== */
-
   submitForm(): void {
     this.submitted = true;
 
     if (this.contactForm.invalid) {
-      console.log('Form Invalid');
-
       this.contactForm.markAllAsTouched();
       return;
     }
@@ -72,26 +55,21 @@ export class Contact {
       next: (res: any) => {
         console.log('CONTACT SUCCESS:', res);
 
-        this.showSuccessPopup = true;
-
         this.contactForm.reset();
 
         this.submitted = false;
+
+        // Redirect to Thank You Page
+        this.router.navigate(['/thank-you']);
       },
 
       error: (err: any) => {
         console.error('CONTACT ERROR:', err);
         console.error('STATUS:', err.status);
         console.error('RESPONSE:', err.error);
+
+        alert('Failed to submit the form. Please try again.');
       },
     });
-  }
-
-  /* =====================================
-     CLOSE POPUP
-  ===================================== */
-
-  closePopup(): void {
-    this.showSuccessPopup = false;
   }
 }

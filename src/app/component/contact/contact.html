@@ -1,18 +1,20 @@
 <section class="contact-section">
   <div class="container">
+    <!-- Heading -->
+
     <div class="contact-heading">
       <span class="contact-badge"> Maharishi Vidya Mandir • Contact Us </span>
 
       <h2>Get In <span>Touch</span></h2>
 
       <p>
-        We welcome parents and students to contact us for admissions, academic enquiries and campus
-        visits. Our team is happy to assist you.
+        We welcome parents and students to contact us for admissions, academic enquiries, campus
+        visits, and general information. Our team is always ready to assist you.
       </p>
     </div>
 
     <div class="contact-wrapper">
-      <!-- LEFT -->
+      <!-- School Information -->
 
       <div class="contact-info">
         <h3>School Information</h3>
@@ -31,7 +33,7 @@
         </div>
 
         <div class="info-box">
-          <i class="fas fa-phone"></i>
+          <i class="fas fa-phone-alt"></i>
 
           <div>
             <h4>Phone Number</h4>
@@ -57,14 +59,14 @@
             <h4>Office Hours</h4>
 
             <p>
-              Monday - Saturday<br />
-              9:00 AM - 5:00 PM
+              Monday – Saturday<br />
+              9:00 AM – 5:00 PM
             </p>
           </div>
         </div>
       </div>
 
-      <!-- RIGHT FORM -->
+      <!-- Contact Form -->
 
       <div class="contact-form-box">
         <h3>Send Enquiry</h3>
@@ -74,13 +76,13 @@
             <div class="field">
               <input type="text" placeholder="Student Name" formControlName="studentName" />
 
-              <small *ngIf="submitted && f['studentName'].errors"> Student name required </small>
+              <small *ngIf="submitted && f['studentName'].errors"> Student Name is required </small>
             </div>
 
             <div class="field">
               <input type="text" placeholder="Parent Name" formControlName="parentName" />
 
-              <small *ngIf="submitted && f['parentName'].errors"> Parent name required </small>
+              <small *ngIf="submitted && f['parentName'].errors"> Parent Name is required </small>
             </div>
           </div>
 
@@ -88,13 +90,17 @@
             <div class="field">
               <input type="email" placeholder="Email Address" formControlName="email" />
 
-              <small *ngIf="submitted && f['email'].errors"> Enter valid email </small>
+              <small *ngIf="submitted && f['email'].errors">
+                Please enter a valid email address
+              </small>
             </div>
 
             <div class="field">
               <input type="text" placeholder="Phone Number" formControlName="phone" />
 
-              <small *ngIf="submitted && f['phone'].errors"> Enter valid 10 digit number </small>
+              <small *ngIf="submitted && f['phone'].errors">
+                Please enter a valid 10-digit mobile number
+              </small>
             </div>
           </div>
 
@@ -103,9 +109,7 @@
               <option value="">Select Class</option>
 
               <option>Pre-KG</option>
-
               <option>LKG</option>
-
               <option>UKG</option>
 
               <option>Grade I</option>
@@ -113,20 +117,24 @@
               <option>Grade III</option>
               <option>Grade IV</option>
               <option>Grade V</option>
+
               <option>Grade VI</option>
               <option>Grade VII</option>
               <option>Grade VIII</option>
+
               <option>Grade IX</option>
+              <option>Grade X</option>
+
               <option>Grade XI</option>
+              <option>Grade XII</option>
             </select>
 
-            <small *ngIf="submitted && f['class'].errors"> Select class </small>
+            <small *ngIf="submitted && f['class'].errors"> Please select a class </small>
           </div>
 
           <div class="field">
-            <textarea rows="5" placeholder="Message" formControlName="message"> </textarea>
-
-            <small *ngIf="submitted && f['message'].errors"> Minimum 10 characters required </small>
+            <textarea rows="5" placeholder="Write your message here..." formControlName="message">
+            </textarea>
           </div>
 
           <button type="submit">Send Enquiry</button>
@@ -134,25 +142,7 @@
       </div>
     </div>
 
-    <!-- =====================================
-THANK YOU POPUP
-===================================== -->
-
-    <div class="success-popup" *ngIf="showSuccessPopup">
-      <div class="success-content">
-        <div class="success-icon">
-          <i class="fas fa-check"></i>
-        </div>
-
-        <h2>Thank You!</h2>
-
-        <p>Your enquiry has been submitted successfully. Our team will contact you shortly.</p>
-
-        <button (click)="closePopup()">OK</button>
-      </div>
-    </div>
-
-    <!-- MAP -->
+    <!-- Google Map -->
 
     <div class="map-container">
       <iframe
