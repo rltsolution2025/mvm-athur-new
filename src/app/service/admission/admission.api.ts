@@ -6,7 +6,6 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class AdmissionApi {
-
   private apiUrl = 'https://mvm-athur-new.onrender.com/api/admission';
 
   constructor(private http: HttpClient) {}
