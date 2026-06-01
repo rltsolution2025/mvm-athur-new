@@ -1,80 +1,99 @@
 <section class="hero-slider">
+
   <div class="slides">
-    <!-- ======================================
-  Slide 1 - Bagless Education
-  ====================================== -->
 
-    <div class="slide active" style="background-image: url('home-slider/Slider1.jpg')">
-      <div class="overlay"></div>
+    <!-- Slide 1 -->
+    <div class="slide active" style="background-image:url('home-slider/Slider1.jpg')">
 
-      <div class="content glass">
-        <h1 class="fade-up">
+      <div class="bg-glass"></div>
+
+      <div class="content">
+        <h1>
           India's 1st
-
-          <span class="highlight-slide"> Bagless Education </span>
+          <span class="highlight-slide">Bagless Education</span>
         </h1>
 
-        <p class="fade-up delay">
-          Redefining learning through cloud-based education, smart classrooms and technology-driven
-          teaching methodologies.
+        <p>
+          Redefining learning through cloud-based education, smart classrooms
+          and technology-driven teaching methodologies.
         </p>
 
-        <a routerLink="/admissions" class="btn fade-up delay2"> Admissions Open 2026 - 2027 </a>
+        <a routerLink="/admissions" class="btn">
+          Admissions Open 2026 - 2027
+        </a>
       </div>
+
     </div>
 
-    <!-- ======================================
-  Slide 2 - School Intro
-  ====================================== -->
+    <!-- Slide 2 -->
+    <div class="slide" style="background-image:url('home-slider/Slider2.jpg')">
 
-    <div class="slide" style="background-image: url('home-slider/Slider2.jpg')">
-      <div class="overlay"></div>
+      <div class="bg-glass"></div>
 
-      <div class="content glass">
-        <h1 class="fade-up">Welcome to Maharishi Vidya Mandir</h1>
+      <div class="content">
+        <h1>Welcome to <span class="highlight-slide">Maharishi Vidya Mandir</span></h1>
 
-        <p class="fade-up delay">CBSE School – Athur, Chengalpattu</p>
+        <p>CBSE School – Athur, Chengalpattu</p>
 
-        <a routerLink="/about" class="btn fade-up delay2"> About School </a>
+        <a routerLink="/about" class="btn">
+          About School
+        </a>
       </div>
+
     </div>
 
-    <!-- ======================================
-  Slide 3 - Smart Learning
-  ====================================== -->
+    <!-- Slide 3 -->
+    <div class="slide" style="background-image:url('home-slider/Slider3.jpg')">
 
-    <div class="slide" style="background-image: url('home-slider/Slider3.jpg')">
-      <div class="overlay"></div>
+      <div class="bg-glass"></div>
 
-      <div class="content glass">
-        <h1 class="fade-up">Empowering Young Minds</h1>
+      <div class="content">
+        <h1>Empowering <span class="highlight-slide">Young Minds</span></h1>
 
-        <p class="fade-up delay">
-          Smart classrooms with digital learning, innovation and interactive education.
+        <p>
+          Smart classrooms with digital learning, innovation and interactive
+          education.
         </p>
 
-        <a routerLink="/facilities" class="btn fade-up delay2"> Explore Facilities </a>
+        <a routerLink="/facilities" class="btn">
+          Explore Facilities
+        </a>
       </div>
+
     </div>
 
-    <!-- ======================================
-  Slide 4 - Holistic Development
-  ====================================== -->
+    <!-- Slide 4 -->
+    <div class="slide" style="background-image:url('home-slider/Slider4.jpg')">
 
-    <div class="slide" style="background-image: url('home-slider/Slider4.jpg')">
-      <div class="overlay"></div>
+      <div class="bg-glass"></div>
 
-      <div class="content glass">
-        <h1 class="fade-up">Holistic Education</h1>
+      <div class="content">
+        <h1>Holistic<span class="highlight-slide"> Education</span></h1>
 
-        <p class="fade-up delay">
-          Academic excellence with sports, activities and character development.
+        <p>
+          Academic excellence with sports, activities and character
+          development.
         </p>
 
-        <a routerLink="/contact" class="btn fade-up delay2"> Contact Us </a>
+        <a routerLink="/contact" class="btn">
+          Contact Us
+        </a>
       </div>
+
     </div>
+
   </div>
+
+  <!-- Navigation -->
+
+  <button class="nav-btn prev" (click)="prevSlide()">
+    ❮
+  </button>
+
+  <button class="nav-btn next" (click)="nextSlide()">
+    ❯
+  </button>
+
 </section>
 
 <!-- About Section -->

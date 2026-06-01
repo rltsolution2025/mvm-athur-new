@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 
@@ -8,6 +8,7 @@ declare var particlesJS: any;
 
 @Component({
   selector: 'app-home',
+  standalone: true,
   imports: [CommonModule, RouterLink, FormsModule],
   templateUrl: './home.html',
   styleUrl: './home.css',
@@ -17,6 +18,12 @@ export class Home implements AfterViewInit {
   successMessage = false;
   submitted = false;
 
+  /* ================= SLIDER ================= */
+
+  slides = [1, 2, 3, 4];
+  currentSlide = 0;
+  slideInterval: any;
+
   subscribe(form: any) {
     this.submitted = true;
     this.successMessage = false;
@@ -25,16 +32,13 @@ export class Home implements AfterViewInit {
       return;
     }
 
-    // ✅ SHOW SUCCESS FIRST
     this.successMessage = true;
 
-    // 🔥 DELAY RESET (IMPORTANT FIX)
     setTimeout(() => {
       form.resetForm();
       this.submitted = false;
     }, 500);
 
-    // AUTO HIDE MESSAGE
     setTimeout(() => {
       this.successMessage = false;
     }, 3000);
@@ -48,27 +52,58 @@ export class Home implements AfterViewInit {
     this.successMessage = false;
   }
 
-  /* ================= INIT ================= */
-  ngAfterViewInit(): void {
-    /* ================= SLIDER ================= */
+  /* ================= HERO SLIDER ================= */
+
+  startSlider() {
+    this.slideInterval = setInterval(() => {
+      this.nextSlide();
+    }, 5000);
+  }
+
+  updateSlide() {
     const slides = document.querySelectorAll('.slide');
-    let current = 0;
 
-    if (slides.length > 0) {
-      setInterval(() => {
-        slides[current].classList.remove('active');
-        current = (current + 1) % slides.length;
-        slides[current].classList.add('active');
-      }, 5000);
-    }
+    slides.forEach((slide, index) => {
+      slide.classList.toggle('active', index === this.currentSlide);
+    });
+  }
 
-    /* ================= PARTICLES ================= */
+  nextSlide() {
+    this.currentSlide = (this.currentSlide + 1) % this.slides.length;
+
+    this.updateSlide();
+  }
+
+  prevSlide() {
+    this.currentSlide = (this.currentSlide - 1 + this.slides.length) % this.slides.length;
+
+    this.updateSlide();
+  }
+
+  goToSlide(index: number) {
+    this.currentSlide = index;
+    this.updateSlide();
+  }
+
+  /* ================= INIT ================= */
+
+  ngAfterViewInit(): void {
+    /* HERO SLIDER */
+    this.startSlider();
+
+    /* PARTICLES */
     if (typeof particlesJS !== 'undefined') {
       particlesJS('particles-js', {
         particles: {
-          number: { value: 30 },
-          size: { value: 3 },
-          move: { speed: 0.8 },
+          number: {
+            value: 30,
+          },
+          size: {
+            value: 3,
+          },
+          move: {
+            speed: 0.8,
+          },
           line_linked: {
             enable: true,
             opacity: 0.15,
@@ -77,20 +112,21 @@ export class Home implements AfterViewInit {
       });
     }
 
-    /* ================= AOS ================= */
-    if (typeof AOS !== 'undefined') {
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-    }
-    /* ================= GALLERY FILTER ================= */
+    /* AOS */
+    AOS.init({
+      duration: 1000,
+      once: true,
+    });
+
+    /* GALLERY FILTER */
+
     const tabs = document.querySelectorAll('.tab');
     const items = document.querySelectorAll('.gallery-item');
 
     tabs.forEach((tab) => {
       tab.addEventListener('click', () => {
         tabs.forEach((t) => t.classList.remove('active'));
+
         tab.classList.add('active');
 
         const filter = tab.getAttribute('data-filter');
@@ -107,10 +143,14 @@ export class Home implements AfterViewInit {
       });
     });
 
-    /* ================= LIGHTBOX ================= */
+    /* LIGHTBOX */
+
     const lightbox = document.getElementById('lightbox') as HTMLElement;
+
     const img = document.getElementById('lightbox-img') as HTMLImageElement;
+
     const video = document.getElementById('lightbox-video') as HTMLIFrameElement;
+
     const closeBtn = document.querySelector('.lightbox .close') as HTMLElement;
 
     items.forEach((item) => {
@@ -121,17 +161,18 @@ export class Home implements AfterViewInit {
 
         if (item.classList.contains('video')) {
           video.src = item.getAttribute('data-video') || '';
+
           video.style.display = 'block';
           img.style.display = 'none';
         } else {
           img.src = item.getAttribute('data-src') || '';
+
           img.style.display = 'block';
           video.style.display = 'none';
         }
       });
     });
 
-    /* CLOSE BUTTON */
     if (closeBtn) {
       closeBtn.addEventListener('click', () => {
         lightbox.style.display = 'none';
@@ -139,7 +180,6 @@ export class Home implements AfterViewInit {
       });
     }
 
-    /* OUTSIDE CLICK CLOSE */
     if (lightbox) {
       lightbox.addEventListener('click', (e: any) => {
         if (e.target === lightbox) {
