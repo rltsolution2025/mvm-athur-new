@@ -21,7 +21,10 @@ export class Admissions {
 
   admissionForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private admissionService: AdmissionApi) {
+  constructor(
+    private fb: FormBuilder,
+    private admissionService: AdmissionApi,
+  ) {
     this.admissionForm = this.fb.group({
       // ======================
       // Student Details
@@ -71,14 +74,17 @@ export class Admissions {
     this.submitted = true;
 
     if (this.admissionForm.invalid) {
-      this.admissionForm.markAllAsTouched();
+      console.log('Admission Form Invalid');
 
+      this.admissionForm.markAllAsTouched();
       return;
     }
 
+    console.log('Admission Data:', this.admissionForm.value);
+
     this.admissionService.submitAdmission(this.admissionForm.value).subscribe({
       next: (res) => {
-        console.log(res);
+        console.log('ADMISSION SUCCESS:', res);
 
         this.showPopup = true;
 
@@ -88,9 +94,9 @@ export class Admissions {
       },
 
       error: (err) => {
-        console.log(err);
-
-        alert('Something went wrong');
+        console.error('ADMISSION ERROR:', err);
+        console.error('STATUS:', err.status);
+        console.error('RESPONSE:', err.error);
       },
     });
   }

@@ -39,8 +39,6 @@ export class Contact {
       phone: ['', [Validators.required, Validators.pattern('^[0-9]{10}$')]],
 
       class: ['', [Validators.required]],
-      
-      grade: ['',[Validators.required]],
 
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
@@ -62,14 +60,17 @@ export class Contact {
     this.submitted = true;
 
     if (this.contactForm.invalid) {
-      this.contactForm.markAllAsTouched();
+      console.log('Form Invalid');
 
+      this.contactForm.markAllAsTouched();
       return;
     }
 
+    console.log('Form Data:', this.contactForm.value);
+
     this.contactService.submitContact(this.contactForm.value).subscribe({
       next: (res: any) => {
-        console.log(res);
+        console.log('CONTACT SUCCESS:', res);
 
         this.showSuccessPopup = true;
 
@@ -79,7 +80,9 @@ export class Contact {
       },
 
       error: (err: any) => {
-        console.log(err);
+        console.error('CONTACT ERROR:', err);
+        console.error('STATUS:', err.status);
+        console.error('RESPONSE:', err.error);
       },
     });
   }
