@@ -508,3 +508,257 @@
     }
   }
 }
+
+/* =========================================================
+   TABLETS (768px - 991px)
+========================================================= */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .top-header-purple {
+    padding: 10px 0;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .left-section,
+  .right-section {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .center-section p {
+    font-size: 13px;
+  }
+
+  .logo-img {
+    width: 320px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .main-header {
+    padding: 10px 0;
+  }
+
+  .offcanvas {
+    width: 350px;
+  }
+}
+
+/* =========================================================
+   MOBILE DEVICES (576px - 767px)
+========================================================= */
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .top-header-purple {
+    padding: 10px 8px;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .left-section {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .left-section .links {
+    font-size: 12px;
+  }
+
+  .center-section {
+    order: -1;
+  }
+
+  .center-section p {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+  }
+
+  .right-section {
+    justify-content: center;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .enroll-btn {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+
+  .logo-img {
+    width: 260px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .main-header {
+    padding: 8px 0;
+  }
+
+  .mobile-toggle {
+    font-size: 26px;
+  }
+
+  .offcanvas {
+    width: 300px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE (375px - 575px)
+========================================================= */
+
+@media screen and (min-width: 375px) and (max-width: 575px) {
+  .top-header-purple {
+    padding: 8px 5px;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  /* Admissions Open Text */
+
+  .center-section {
+    order: -1;
+    width: 100%;
+  }
+
+  .center-section p {
+    font-size: 11px;
+    line-height: 1.5;
+    font-weight: 700;
+    animation: none;
+  }
+
+  .left-section {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .left-section .links {
+    font-size: 11px;
+  }
+
+  .right-section {
+    justify-content: center;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .enroll-btn {
+    font-size: 11px;
+    padding: 7px 14px;
+  }
+
+  .logo-img {
+    width: 220px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .main-header {
+    padding: 8px 0;
+  }
+
+  .mobile-toggle {
+    font-size: 24px;
+  }
+
+  .offcanvas {
+    width: 280px;
+  }
+
+  .mobile-menu a,
+  .mobile-dropdown-btn {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================
+   EXTRA SMALL MOBILE (320px - 374px)
+========================================================= */
+
+@media screen and (max-width: 374px) {
+  .top-header-purple {
+    padding: 8px 5px;
+  }
+
+  .header-wrapper {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  /* Admissions Open Text */
+
+  .center-section {
+    order: -1;
+    width: 100%;
+  }
+
+  .center-section p {
+    font-size: 10px;
+    line-height: 1.5;
+    font-weight: 700;
+    animation: none;
+  }
+
+  .left-section {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .left-section .links {
+    font-size: 10px;
+  }
+
+  .right-section {
+    justify-content: center;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .enroll-btn {
+    font-size: 10px;
+    padding: 6px 12px;
+  }
+
+  .logo-img {
+    width: 180px;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .main-header {
+    padding: 6px 0;
+  }
+
+  .mobile-toggle {
+    font-size: 22px;
+  }
+
+  .offcanvas {
+    width: 260px;
+  }
+
+  .mobile-menu a,
+  .mobile-dropdown-btn {
+    font-size: 13px;
+  }
+}
