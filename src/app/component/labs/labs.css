@@ -542,3 +542,272 @@ MOBILE
     font-size: 30px;
   }
 }
+
+/* ===================================
+TABLET VIEW
+=================================== */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .kg-modern,
+  .learning-approach,
+  .day-section,
+  .join-section {
+    padding: 80px 20px;
+  }
+
+  .kg-left {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .kg-badge {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .kg-left h1 {
+    font-size: 48px;
+    line-height: 1.3;
+  }
+
+  .kg-left p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .kg-buttons {
+    justify-content: center;
+  }
+
+  .image-layout {
+    margin-top: 40px;
+  }
+
+  .main-image {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    margin: auto;
+  }
+
+  .small-image {
+    width: 180px;
+    height: 180px;
+    right: 30px;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================================
+MOBILE VIEW
+=================================== */
+
+@media screen and (max-width: 767px) {
+  .kg-modern,
+  .learning-approach,
+  .day-section,
+  .join-section {
+    padding: 60px 15px;
+  }
+
+  .kg-left {
+    text-align: center;
+  }
+
+  .kg-badge {
+    font-size: 11px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+  }
+
+  .kg-left h1 {
+    font-size: 32px;
+    line-height: 1.3;
+    margin-bottom: 15px;
+  }
+
+  .kg-left p {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+  }
+
+  .kg-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 14px;
+  }
+
+  /* Images */
+
+  .image-layout {
+    height: auto;
+    display: block;
+    margin-top: 35px;
+  }
+
+  .main-image {
+    width: 100%;
+    height: 260px;
+    border-radius: 20px;
+  }
+
+  .small-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    right: auto;
+    bottom: auto;
+    margin-top: 15px;
+    border-radius: 20px;
+    border-width: 5px;
+  }
+
+  .heading {
+    margin-bottom: 40px;
+  }
+
+  .heading h2 {
+    font-size: 30px;
+  }
+
+  .heading p {
+    font-size: 14px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .approach-card {
+    padding: 25px 20px;
+  }
+
+  .approach-card h4 {
+    font-size: 20px;
+  }
+
+  .day-image {
+    margin-bottom: 25px;
+  }
+
+  .day-content {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .day-content h2 {
+    font-size: 28px;
+  }
+
+  .day-content p {
+    font-size: 14px;
+  }
+
+  .day-content ul {
+    text-align: left;
+  }
+
+  .join-card {
+    padding: 30px 20px;
+    border-radius: 25px;
+  }
+
+  .join-card h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .join-card p {
+    font-size: 14px;
+  }
+
+  .join-card a {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* ===================================
+SMALL MOBILE
+=================================== */
+
+@media screen and (max-width: 480px) {
+  .kg-left h1 {
+    font-size: 26px;
+  }
+
+  .kg-left p {
+    font-size: 13px;
+  }
+
+  .kg-badge {
+    font-size: 10px;
+  }
+
+  .main-image {
+    height: 220px;
+  }
+
+  .small-image {
+    height: 180px;
+  }
+
+  .heading h2,
+  .day-content h2,
+  .join-card h2 {
+    font-size: 24px;
+  }
+
+  .approach-card {
+    padding: 20px 15px;
+  }
+
+  .approach-card i {
+    width: 65px;
+    height: 65px;
+    font-size: 28px;
+  }
+}
+
+/* ===================================
+EXTRA SMALL MOBILE
+=================================== */
+
+@media screen and (max-width: 360px) {
+  .kg-left h1 {
+    font-size: 22px;
+  }
+
+  .kg-left p {
+    font-size: 12px;
+  }
+
+  .main-image {
+    height: 190px;
+  }
+
+  .small-image {
+    height: 150px;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    font-size: 13px;
+    padding: 12px;
+  }
+
+  .join-card h2 {
+    font-size: 22px;
+  }
+}

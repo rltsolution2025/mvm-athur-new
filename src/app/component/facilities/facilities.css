@@ -542,3 +542,302 @@ MOBILE
     font-size: 30px;
   }
 }
+
+/* =====================================================
+LARGE TABLETS (992px - 1199px)
+===================================================== */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+  .kg-left h1 {
+    font-size: 52px;
+  }
+
+  .main-image {
+    width: 380px;
+    height: 420px;
+  }
+
+  .small-image {
+    width: 200px;
+    height: 200px;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =====================================================
+TABLETS (768px - 991px)
+===================================================== */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .kg-modern,
+  .learning-approach,
+  .day-section,
+  .join-section {
+    padding: 80px 20px;
+  }
+
+  .kg-left {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .kg-left h1 {
+    font-size: 44px;
+    line-height: 1.3;
+  }
+
+  .kg-left p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .kg-buttons {
+    justify-content: center;
+  }
+
+  .image-layout {
+    height: auto;
+    margin-top: 40px;
+  }
+
+  .main-image {
+    width: 100%;
+    max-width: 500px;
+    height: 400px;
+    margin: auto;
+  }
+
+  .small-image {
+    width: 180px;
+    height: 180px;
+    right: 20px;
+  }
+
+  .approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .heading h2,
+  .day-content h2,
+  .join-card h2 {
+    font-size: 36px;
+  }
+}
+
+/* =====================================================
+MOBILE DEVICES (576px - 767px)
+===================================================== */
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  section {
+    padding: 70px 15px !important;
+  }
+
+  .kg-left {
+    text-align: center;
+  }
+
+  .kg-badge {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  .kg-left h1 {
+    font-size: 36px;
+    line-height: 1.3;
+  }
+
+  .kg-left p {
+    font-size: 15px;
+    line-height: 1.8;
+  }
+
+  .kg-buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    width: 100%;
+  }
+
+  .image-layout {
+    height: auto;
+    display: block;
+    margin-top: 35px;
+  }
+
+  .main-image,
+  .small-image {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    right: auto;
+    bottom: auto;
+    margin-bottom: 15px;
+    border-radius: 20px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading h2,
+  .day-content h2,
+  .join-card h2 {
+    font-size: 32px;
+  }
+
+  .join-card {
+    padding: 35px 25px;
+  }
+}
+
+/* =====================================================
+SMALL MOBILE (375px - 575px)
+===================================================== */
+
+@media screen and (min-width: 375px) and (max-width: 575px) {
+  section {
+    padding: 60px 15px !important;
+  }
+
+  .kg-left {
+    text-align: center;
+  }
+
+  .kg-badge {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
+  .kg-left h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .kg-left p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .kg-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .image-layout {
+    height: auto;
+    display: block;
+    margin-top: 30px;
+  }
+
+  .main-image,
+  .small-image {
+    position: relative;
+    width: 100%;
+    height: 240px;
+    margin-bottom: 15px;
+    border-radius: 18px;
+    right: auto;
+    bottom: auto;
+  }
+
+  .heading h2,
+  .day-content h2,
+  .join-card h2 {
+    font-size: 28px;
+  }
+
+  .heading p,
+  .day-content p,
+  .join-card p {
+    font-size: 14px;
+  }
+
+  .approach-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .approach-card {
+    padding: 25px 20px;
+  }
+
+  .join-card {
+    padding: 30px 20px;
+  }
+}
+
+/* =====================================================
+EXTRA SMALL MOBILE (320px - 374px)
+===================================================== */
+
+@media screen and (max-width: 374px) {
+  section {
+    padding: 50px 12px !important;
+  }
+
+  .kg-badge {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+
+  .kg-left h1 {
+    font-size: 24px;
+    line-height: 1.4;
+  }
+
+  .kg-left p {
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .main-image,
+  .small-image {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    right: auto;
+    bottom: auto;
+    margin-bottom: 12px;
+    border-radius: 15px;
+  }
+
+  .heading h2,
+  .day-content h2,
+  .join-card h2 {
+    font-size: 24px;
+  }
+
+  .heading p,
+  .day-content p,
+  .join-card p {
+    font-size: 13px;
+  }
+
+  .approach-card {
+    padding: 20px 15px;
+  }
+
+  .join-card {
+    padding: 25px 15px;
+  }
+}

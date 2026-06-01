@@ -1537,3 +1537,283 @@ BAGLESS SECTION
     height: 300px;
   }
 }
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* ==========================
+   TABLET (768px - 991px)
+========================== */
+
+@media screen and (max-width: 991px) {
+  .shape-blue,
+  .shape-yellow,
+  .mvm-bg {
+    display: none;
+  }
+
+  .hero-container,
+  .about-container,
+  .leader-wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  /* Admissions Open Badge */
+
+  .hero-badge {
+    order: -1;
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 10px 20px;
+    font-size: 13px;
+    border-radius: 30px;
+  }
+
+  .hero-left h1 {
+    font-size: 38px;
+  }
+
+  .hero-left p {
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    justify-content: center;
+  }
+
+  .school-image {
+    max-width: 100%;
+    height: 320px;
+    transform: none;
+  }
+
+  .leader-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================
+   MOBILE (481px - 767px)
+========================== */
+
+@media screen and (max-width: 767px) {
+  section {
+    padding: 60px 15px !important;
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .mvm-hero-v2 {
+    padding: 50px 15px;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    gap: 25px;
+    text-align: center;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Admissions Open 2026-2027 */
+
+  .hero-badge {
+    order: -1;
+    display: inline-block;
+    margin-bottom: 15px;
+
+    padding: 8px 18px;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    border-radius: 30px;
+  }
+
+  .hero-left h1 {
+    font-size: 30px;
+    line-height: 1.3;
+  }
+
+  .hero-left p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 100%;
+  }
+
+  .hero-actions {
+    width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .school-image {
+    width: 100%;
+    height: 240px;
+    border-radius: 20px;
+    border: 5px solid #fff;
+    transform: none;
+  }
+
+  .school-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .section-header h2,
+  .heading-area h2,
+  .bagless-content h2 {
+    font-size: 28px;
+    line-height: 1.4;
+  }
+
+  .section-header p,
+  .heading-area p,
+  .bagless-content p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .about-card,
+  .experience-card,
+  .leader-glass-card,
+  .mvm-card {
+    padding: 25px;
+  }
+
+  .bottom-content {
+    padding: 25px;
+  }
+
+  .content-box h3 {
+    font-size: 24px;
+  }
+
+  .bagless-features {
+    grid-template-columns: 1fr;
+  }
+
+  .bag-item {
+    width: 100%;
+  }
+
+  .bagless-image img {
+    height: 250px;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 15px;
+  }
+
+  .profile-content {
+    text-align: center;
+  }
+
+  .profile-content h3 {
+    font-size: 22px;
+  }
+}
+
+/* ==========================
+   SMALL MOBILE (361px - 480px)
+========================== */
+
+@media screen and (max-width: 480px) {
+  .hero-badge {
+    font-size: 11px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+  }
+
+  .hero-left h1 {
+    font-size: 24px;
+  }
+
+  .hero-left p {
+    font-size: 13px;
+  }
+
+  .school-image {
+    height: 200px;
+  }
+
+  .section-header h2,
+  .heading-area h2,
+  .bagless-content h2 {
+    font-size: 24px;
+  }
+
+  .content-box h3 {
+    font-size: 20px;
+  }
+
+  .profile-content h3 {
+    font-size: 20px;
+  }
+
+  .about-card,
+  .experience-card,
+  .leader-glass-card,
+  .mvm-card {
+    padding: 20px;
+  }
+}
+
+/* ==========================
+   EXTRA SMALL MOBILE (≤360px)
+========================== */
+
+@media screen and (max-width: 360px) {
+  .hero-badge {
+    font-size: 10px;
+    padding: 7px 14px;
+  }
+
+  .hero-left h1 {
+    font-size: 22px;
+  }
+
+  .hero-left p {
+    font-size: 12px;
+  }
+
+  .school-image {
+    height: 180px;
+  }
+
+  .apply-btn,
+  .enquiry-btn {
+    padding: 12px;
+    font-size: 13px;
+  }
+}
+      

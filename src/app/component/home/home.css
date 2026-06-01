@@ -21,10 +21,9 @@
   inset: 0;
   opacity: 0;
   transition: all 1s ease;
-  background-size: cover;
-  background-position: center center;
-}
 
+  background: center center / cover no-repeat;
+}
 .slide.active {
   opacity: 1;
   z-index: 2;
@@ -210,41 +209,6 @@
   }
 }
 
-/* ==========================
-   MOBILE
-========================== */
-
-@media (max-width: 768px) {
-  .hero-slider {
-    height: 75vh;
-  }
-
-  .content {
-    left: 20px;
-    right: 20px;
-    max-width: 100%;
-  }
-
-  .content h1 {
-    font-size: 2rem;
-  }
-
-  .content p {
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-
-  .btn {
-    padding: 12px 24px;
-    font-size: 14px;
-  }
-
-  .nav-btn {
-    width: 42px;
-    height: 42px;
-    font-size: 20px;
-  }
-}
 /* SECTION */
 .about-section {
   padding: 80px 20px;
@@ -1072,23 +1036,6 @@ body {
   transform: scale(0.96);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .gallery-grid-modern {
-    grid-template-columns: 1fr;
-    grid-auto-rows: auto;
-  }
-
-  .gallery-item.big {
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-
-  .section-title {
-    font-size: 28px;
-  }
-}
-
 /* SECTION */
 .newsletter-section {
   padding: 100px 20px;
@@ -1201,241 +1148,189 @@ body {
   margin-left: 10px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .newsletter-box {
-    padding: 30px 20px;
+/* ==================================================
+   MOBILE & TABLET HERO SLIDER
+   Remove Glass Effect
+================================================== */
+
+/* Mobile Small */
+@media screen and (max-width: 374px) {
+  .hero-slider {
+    height: 260px;
   }
 
-  .newsletter-box h2 {
-    font-size: 24px;
+  .bg-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
+  }
+
+  .content {
+    width: 92%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .content h1 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .highlight-slide {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    font-size: 10px;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+    font-size: 11px;
+    min-width: 150px;
+  }
+
+  .nav-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .prev {
+    left: 5px;
+  }
+  .next {
+    right: 5px;
   }
 }
 
-/* ========================================================= MOBILE VIEW ========================================================= */
-@media screen and (max-width: 575px) {
-  /* ========================================================= HERO SLIDER ========================================================= */
+/* Mobile */
+@media screen and (min-width: 375px) and (max-width: 575px) {
   .hero-slider {
-    height: 85vh;
-    height: 450px;
+    height: 300px;
   }
-  .slide {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
+
+  .bg-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
   }
   .content {
-    left: 0;
-    right: 0;
-    top: 52%;
-    transform: translateY(-50%);
-    width: 100%;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     max-width: 100%;
-    padding: 0 16px;
+  }
+
+  .content h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+  }
+
+  .highlight-slide {
+    display: block;
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .btn {
+    padding: 10px 18px;
+    font-size: 12px;
+    min-width: 180px;
+  }
+
+  .nav-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+
+  .prev {
+    left: 8px;
+  }
+  .next {
+    right: 8px;
+  }
+}
+
+/* Large Mobile */
+@media screen and (min-width: 576px) and (max-width: 767px) {
+  .hero-slider {
+    height: 380px;
+  }
+  .bg-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
+  }
+  .content {
+    width: 85%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
   }
-  .glass {
-    padding: 22px 18px;
-    border-radius: 18px;
-    background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(10px);
-  }
+
   .content h1 {
-    font-size: 26px;
-    line-height: 1.4;
-    margin-bottom: 8px;
+    font-size: 2.4rem;
   }
+
   .content p {
     font-size: 14px;
-    line-height: 1.8;
-    margin: 16px 0 22px;
-    color: #f1f1f1;
   }
+
   .btn {
-    width: 100%;
-    display: block;
-    padding: 14px;
-    border-radius: 14px;
-    font-size: 14px;
-    text-align: center;
-  } /* ========================================================= ABOUT SECTION ========================================================= */
-  .about-section {
-    padding: 60px 15px;
+    padding: 12px 22px;
   }
-  .about-container {
-    flex-direction: column;
-    gap: 35px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .hero-slider {
+    height: 500px;
   }
-  .about-content {
-    text-align: center;
+
+  .bg-glass {
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.55));
   }
-  .abt-tlt-1 {
-    font-size: 30px;
-    line-height: 1.4;
-  }
-  .sub-heading {
-    font-size: 22px;
-    line-height: 1.5;
-  }
-  .about-content p {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .about-features {
-    justify-content: center;
-    gap: 12px;
-  }
-  .feature {
-    width: 100%;
-    justify-content: center;
-    padding: 14px;
-    border-radius: 14px;
-  }
-  .image-box {
-    max-width: 100%;
-  }
-  .image-box::before {
-    display: none;
-  } /* ========================================================= WHY SECTION ========================================================= */
-  .why-section {
-    padding: 60px 15px;
-  }
-  .section-title {
-    font-size: 30px;
-    line-height: 1.4;
-  }
-  .section-subtitle {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .why-timeline::before {
-    left: 18px;
-  }
-  .why-item {
-    width: 100%;
-    left: 0 !important;
-    padding-left: 60px;
-    padding-right: 0;
-    margin-bottom: 24px;
-    text-align: left !important;
-  }
-  .why-icon {
-    width: 42px;
-    height: 42px;
-    left: -3px !important;
-    right: auto !important;
-    font-size: 14px;
-  }
-  .why-content {
-    padding: 18px;
-    border-radius: 16px;
-  }
-  .why-content h4 {
-    font-size: 18px;
-  }
-  .why-content p {
-    font-size: 14px;
-    line-height: 1.7;
-  } /* ========================================================= INSPIRE SECTION ========================================================= */
-  .inspire-section {
-    padding: 60px 15px;
-  }
-  .section-title-1 {
-    font-size: 30px;
-    line-height: 1.4;
-  }
-  .section-subtitle-1 {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .mvm-box {
-    padding: 24px 18px;
-    border-radius: 16px;
-  }
-  .mvm-box h3 {
-    font-size: 20px;
-  }
-  .mvm-box p {
-    font-size: 14px;
-    line-height: 1.8;
-  } /* ========================================================= FOUNDER SECTION ========================================================= */
-  .founder-desk {
-    padding: 60px 15px;
-  }
-  .founder-image img {
-    max-width: 220px;
-  }
-  .founder-message {
-    padding: 22px 18px;
-    border-radius: 16px;
+
+  .content {
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
   }
-  .founder-message h3 {
-    font-size: 22px;
+
+  .content h1 {
+    font-size: 3rem;
   }
-  .founder-message p {
-    font-size: 14px;
-    line-height: 1.8;
-  } /* ========================================================= GALLERY SECTION ========================================================= */
-  .gallery-section {
-    padding: 60px 15px;
+
+  .content p {
+    font-size: 16px;
   }
-  .gallery-tabs {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .tab {
-    padding: 10px 18px;
-    font-size: 13px;
-    border-radius: 30px;
-  }
-  .gallery-grid-modern {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-  .gallery-item,
-  .gallery-item.big {
-    height: 240px;
-    grid-column: span 1;
-    grid-row: span 1;
-  }
-  .overlay {
-    opacity: 1;
-  }
-  .overlay h5 {
-    font-size: 15px;
-  } /* ========================================================= NEWSLETTER ========================================================= */
-  .newsletter-section {
-    padding: 60px 15px;
-  }
-  .newsletter-box {
-    padding: 30px 18px;
-    border-radius: 18px;
-  }
-  .newsletter-box h2 {
-    font-size: 26px;
-    line-height: 1.4;
-  }
-  .newsletter-box p {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-  .input-wrapper input {
-    height: 52px;
-    font-size: 14px;
-  }
-  .btn-subscribe {
-    height: 52px;
-    font-size: 14px;
-    border-radius: 14px;
-  } /* ========================================================= EXTRA FIXES ========================================================= */
-  .edu-bg,
-  #particles-js {
-    display: none;
-  }
-  section {
-    overflow: hidden;
+
+  .btn {
+    padding: 12px 24px;
   }
 }

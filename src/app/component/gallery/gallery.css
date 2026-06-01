@@ -315,3 +315,272 @@ VIDEO CARD
 .memory-card:hover {
   transform: translateY(-10px);
 }
+
+/* =====================================================
+LARGE TABLETS (992px - 1199px)
+===================================================== */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+  .gallery-heading h2 {
+    font-size: 46px;
+  }
+
+  .memory-grid {
+    gap: 20px;
+  }
+
+  .memory-overlay h4 {
+    font-size: 22px;
+  }
+}
+
+/* =====================================================
+TABLETS (768px - 991px)
+===================================================== */
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+
+  .school-gallery {
+    padding: 80px 20px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 50px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 40px;
+  }
+
+  .gallery-heading p {
+    font-size: 15px;
+  }
+
+  .memory-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 260px;
+    gap: 20px;
+  }
+
+  .memory-card.large {
+    grid-row: span 1;
+  }
+
+  .memory-overlay {
+    padding: 20px;
+  }
+
+  .memory-overlay h4 {
+    font-size: 20px;
+  }
+
+  .memory-overlay p {
+    font-size: 13px;
+  }
+}
+
+/* =====================================================
+MOBILE DEVICES (576px - 767px)
+===================================================== */
+
+@media screen and (min-width: 576px) and (max-width: 767px) {
+
+  .school-gallery {
+    padding: 70px 15px;
+  }
+
+  .gallery-badge {
+    font-size: 12px;
+    padding: 8px 16px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 34px;
+  }
+
+  .gallery-heading p {
+    font-size: 14px;
+    line-height: 1.8;
+  }
+
+  .memory-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 280px;
+    gap: 20px;
+  }
+
+  .memory-card.large {
+    grid-row: span 1;
+  }
+
+  .memory-overlay {
+    padding: 18px;
+  }
+
+  .memory-overlay h4 {
+    font-size: 20px;
+  }
+
+  .memory-overlay p {
+    font-size: 13px;
+  }
+
+  .play-btn {
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .popup-content {
+    max-width: 95%;
+  }
+
+  .close-btn {
+    top: -10px;
+    right: -10px;
+  }
+}
+
+/* =====================================================
+SMALL MOBILE (375px - 575px)
+===================================================== */
+
+@media screen and (min-width: 375px) and (max-width: 575px) {
+
+  .school-gallery {
+    padding: 60px 15px;
+  }
+
+  .gallery-badge {
+    font-size: 11px;
+    padding: 8px 14px;
+  }
+
+  .gallery-heading {
+    margin-bottom: 40px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 30px;
+  }
+
+  .gallery-heading p {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .memory-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 240px;
+    gap: 15px;
+  }
+
+  .memory-card {
+    border-radius: 20px;
+  }
+
+  .memory-card.large {
+    grid-row: span 1;
+  }
+
+  .memory-overlay {
+    padding: 15px;
+  }
+
+  .memory-overlay h4 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+
+  .memory-overlay p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .count-badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .play-btn {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+
+  .popup-content img,
+  .popup-content video {
+    border-radius: 15px;
+  }
+
+  .close-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+}
+
+/* =====================================================
+EXTRA SMALL MOBILE (320px - 374px)
+===================================================== */
+
+@media screen and (max-width: 374px) {
+
+  .school-gallery {
+    padding: 50px 12px;
+  }
+
+  .gallery-badge {
+    font-size: 10px;
+    padding: 7px 12px;
+  }
+
+  .gallery-heading h2 {
+    font-size: 26px;
+  }
+
+  .gallery-heading p {
+    font-size: 12px;
+  }
+
+  .memory-grid {
+    grid-template-columns: 1fr;
+    grid-auto-rows: 220px;
+    gap: 12px;
+  }
+
+  .memory-card {
+    border-radius: 18px;
+  }
+
+  .memory-overlay {
+    padding: 12px;
+  }
+
+  .memory-overlay h4 {
+    font-size: 16px;
+  }
+
+  .memory-overlay p {
+    font-size: 11px;
+    line-height: 1.4;
+  }
+
+  .count-badge {
+    font-size: 10px;
+    padding: 4px 8px;
+  }
+
+  .play-btn {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .close-btn {
+    width: 34px;
+    height: 34px;
+    font-size: 12px;
+  }
+}
